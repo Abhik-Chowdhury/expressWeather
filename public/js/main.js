@@ -22,6 +22,7 @@ const getInfo = async(event) =>{
           city_display.innerText=`Plz write the name before search`
           dataHide.classList.add('data_hide')
     }
+  
     else{
         try{
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=812fab1fe99118806aa2765054db4fb8&units=metric`
@@ -31,7 +32,7 @@ const getInfo = async(event) =>{
             const arrayData = [data];
             temp_real.innerText = arrayData[0].main.temp;
             // temp_status.innerText = 
-            city.innerText= `${arrayData[0].name}, ${arrayData[0].sys.country}`;
+            city_display.innerText= `${arrayData[0].name}, ${arrayData[0].sys.country}`;
 
             const tempStatus = arrayData[0].weather[0].main;
             // The Weather Icon Change
@@ -58,9 +59,10 @@ const getInfo = async(event) =>{
         }catch{
             city_display.innerText=`Plz enter city name properly`;
             dataHide.classList.add('data_hide');
-        }
-             
+            return; 
+        }     
     }
+  
 }
 
 searchBtn.addEventListener('click',getInfo);
