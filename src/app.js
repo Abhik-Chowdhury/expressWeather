@@ -14,7 +14,8 @@ app.set('views', template_path);
 hbs.registerPartials(nav_path);
 
 //The Route
-app.get("",(req,res)=>{
+app.get("",(req,res,next)=>{
+    
     res.render("index")
 })
 app.get("/about",(req,res)=>{
