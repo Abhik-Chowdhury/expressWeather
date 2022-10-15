@@ -12,6 +12,7 @@
 
 html {
     font-size: 62.5%;
+   
     /* 1rem = 10px */
 }
 
@@ -339,6 +340,7 @@ body .loader {
     height: 1000px;
     display: block;
     position: absolute;
+    overflow-y: hidden;
 }
 
 .loader h1 {
@@ -354,7 +356,7 @@ body .loader {
 
 .body {
     position: absolute;
-    top: 50%;
+    top: 40%;
     margin-left: -50px;
     left: 50%;
     animation: speeder 0.4s linear infinite;
@@ -365,7 +367,7 @@ body .loader {
     width: 35px;
     background: #000;
     position: absolute;
-    top: -19px;
+    top: -10px;
     left: 60px;
     border-radius: 2px 10px 1px 0;
 }
