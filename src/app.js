@@ -14,7 +14,7 @@ app.set('views', template_path);
 hbs.registerPartials(nav_path);
 
 //The Route
-app.get("",(req,res,next)=>{
+app.get("http://express-weather2022.herokuapp.com/",(req,res,next)=>{
     
     res.render("index")
 })
